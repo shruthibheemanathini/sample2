@@ -1,0 +1,72 @@
+$(function() {
+rtc.card.addActions({
+"068a8989": {
+  options: {
+      css: {
+        "background-color": "#fff"
+      }
+  },
+    sectionMarker: true
+},
+"End": {
+  load: function(){
+    
+  },
+    show: function() {
+      
+      client_advisor_email = EngageOneVideo.visitData.get("client_advisor_email");
+      client_advisor_name = EngageOneVideo.visitData.get("client_advisor_name");
+      client_advisor_phone = EngageOneVideo.visitData.get("client_advisor_phone");
+      client_advisor_title = EngageOneVideo.visitData.get("client_advisor_title");
+      
+      $('.advisor h1').text(client_advisor_name);
+      $('.advisor h1 span').text(client_advisor_title);
+      
+      $('.advisor .number').text(client_advisor_phone);
+      $('.advisor .email').text(client_advisor_email);
+      
+      article_1_heading = EngageOneVideo.visitData.get("news_article_1_headline");
+      article_1_URL = EngageOneVideo.visitData.get("news_article_1_url");
+      article_2_heading = EngageOneVideo.visitData.get("news_article_2_headline");
+      article_2_URL = EngageOneVideo.visitData.get("news_article_2_url");
+      article_3_heading = EngageOneVideo.visitData.get("news_article_3_headline");
+      article_3_URL = EngageOneVideo.visitData.get("news_article_3_url");
+      
+      console.log (article_1_heading);
+      
+      /*article_1_heading = "this is testing"
+      article_2_heading = "this is testing 2"
+      article_3_heading = "this is testing 3"
+      article_3_URL = "google.com"
+      article_2_URL = "pb.com"
+      article_1_URL = "precisely.com"*/
+      
+      $('#oneNews a').text(article_1_heading);
+      $('#twoNews a').text(article_2_heading);
+      $('#threeNews a').text(article_3_heading);
+      
+      $("#oneNews a").attr("href", article_1_URL);
+      $("#twoNews a").attr("href", article_2_URL);
+      $("#threeNews a").attr("href", article_3_URL);
+      
+    }
+},
+"b3750b00": {
+  options: {
+      css: {
+        "background-color": "#fff"
+      }
+  },
+    sectionMarker: true
+},
+"ff791b7b": {
+  options: {
+      css: {
+        "background-color": "#fff"
+      }
+  },
+    sectionMarker: true
+}
+});
+
+});
